@@ -1,0 +1,32 @@
+.banner {
+    background-color: $white;
+}
+
+.couplet-wide+.banner {
+    background-color: transparent;
+}
+
+.couplet-wide,
+.couplet-left,
+.couplet-right {
+    display: none;
+}
+
+.couplet-left,
+.couplet-right {
+    position: absolute;
+    width: 300px;
+}
+
+.couplet-left {
+    left: calc((100% - 1000px) / 2 - 300px);
+}
+
+.couplet-right {
+    right: calc((100% - 1000px) / 2 - 300px);
+}
+
+.bottom-banner {
+    margin-top: -1.5em;
+    margin-bottom: 50px;
+}

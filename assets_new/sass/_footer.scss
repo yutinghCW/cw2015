@@ -1,0 +1,148 @@
+footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid $gray-100;
+    background-color: $gray-bg;
+    @include breakpoint(930px) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .container {
+        max-width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .flex {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .left {
+        width: 100%;
+        font-size: 0.875em;
+        @include breakpoint(930px) {
+            width: calc(100% - 400px);
+            max-width: 768px;
+        }
+        @include breakpoint(max-width 929px) {
+            order: 2;
+        }
+        .cwlink {
+            margin-right: -400px;
+            margin-bottom: 20px;
+            line-height: 1.1;
+            @include breakpoint(max-width 929px) {
+                display: none;
+            }
+            li {
+                padding: 0 1em;
+                &:first-child {
+                    padding-left: 0;
+                }
+                +li {
+                    border-left: 1px solid $black;
+                }
+                a {
+                    color: $black;
+                    &:hover {
+                        color: $primary;
+                    }
+                }
+            }
+        }
+        .cwData {
+            span {
+                display: inline-block;
+                margin-right: 1em;
+                color: $black;
+                line-height: 1.6;
+            }
+        }
+    }
+    .right {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        @include breakpoint(max-width 929px) {
+            flex-wrap: wrap;
+            width: 100%;
+            order: 1;
+        }
+        @include breakpoint(930px) {
+            flex-direction: row;
+            align-items: flex-end;
+        }
+        >* {
+            @include breakpoint(max-width 929px) {
+                width: 100%;
+            }
+        }
+        .cwSns li {
+            +li {
+                margin-left: 10px;
+            }
+            img {
+                width: auto;
+                height: 30px;
+                -webkit-filter: grayscale(100%);
+                filter: grayscale(100%);
+                @include transition(all 0.3s);
+            }
+            &:hover img {
+                -webkit-filter: grayscale(0);
+                filter: grayscale(0);
+            }
+        }
+        .appStore {
+            @include breakpoint(930px) {
+                margin-left: 25px;
+            }
+            @include breakpoint(max-width 929px) {
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+            .title {
+                margin-top: 0;
+                margin-bottom: 10px;
+                font-size: 0.875em;
+                font-weight: 300;
+                @include breakpoint(930px) {
+                    text-align: center;
+                }
+            }
+            ul.app-logo li {
+                +li {
+                    margin-left: 10px;
+                }
+                a {
+                    display: block;
+                    img {
+                        width: auto;
+                        height: 35px;
+                    }
+                }
+            }
+        }
+    }
+    ul {
+        @include listrest(0, 0, none);
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        flex-wrap: wrap;
+    }
+}
