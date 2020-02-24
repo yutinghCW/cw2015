@@ -211,7 +211,6 @@ select {
 body {
   position: relative;
   font-family: Arial, "微軟正黑體", "繁黑體", 'Microsoft JhengHei', 'Microsoft YaHei', 'Heiti TC', 'LiHei Pro', sans-serif, "新細明體", PMingLiU;
-  font-weight: 300;
   line-height: 1.5;
   background-color: #f5f5f5;
 }
@@ -740,7 +739,7 @@ header .main-header .main-header-body .smAd {
 
 footer {
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 60px;
   border-top: 1px solid #e3e3e3;
   background-color: #f5f5f5;
 }
@@ -2756,7 +2755,7 @@ section.list-link > ul.etu-item-list li:hover .interest-list-link-title a {
   position: relative;
   max-width: 520px;
   margin: 0 auto;
-  padding: 30px 15px;
+  padding: 45px 15px;
   text-align: center;
   background-color: #fff;
   border: 1px solid #e3e3e3;
@@ -2892,6 +2891,9 @@ section.list-link > ul.etu-item-list li:hover .interest-list-link-title a {
   .article-page article .paywallBox .paywallBoxFrame a.btnLink {
     font-size: 1em;
   }
+}
+.article-page article .paywallBox .paywallBoxContent > *:last-child {
+  margin-bottom: 0 !important;
 }
 
 .paywallAnnounce {
