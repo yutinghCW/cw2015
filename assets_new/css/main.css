@@ -33,17 +33,6 @@ template {
   display: none;
 }
 
-/*! normalize.css v3.0.0 | Base | MIT License | git.io/normalize */
-html {
-  font-family: sans-serif;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-}
-
-body {
-  margin: 0;
-}
-
 /*! normalize.css v3.0.0 | Links | MIT License | git.io/normalize */
 a {
   background: transparent;
@@ -210,6 +199,8 @@ select {
 
 body {
   position: relative;
+  padding: 0;
+  margin: 0;
   font-family: Arial, "微軟正黑體", "繁黑體", 'Microsoft JhengHei', 'Microsoft YaHei', 'Heiti TC', 'LiHei Pro', sans-serif, "新細明體", PMingLiU;
   line-height: 1.5;
   background-color: #f5f5f5;
