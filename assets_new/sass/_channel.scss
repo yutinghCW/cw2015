@@ -16,7 +16,7 @@
             margin-bottom: 15px;
             background-color: $white;
             @include breakpoint(768px) {
-                border: 1px solid $gray-100;
+                border: 1px solid $gray-200;
                 margin-bottom: 20px;
             }
             .caption p {

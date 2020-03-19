@@ -42,6 +42,7 @@
         }
     }
     .main {
+        margin-top: 20px;
         @include breakpoint(768px) {
             width: $index;
         }
@@ -55,11 +56,11 @@
             @include breakpoint(768px) {
                 margin-bottom: 20px;
                 background-color: $white;
-                border: 1px solid $gray-100;
+                border: 1px solid $gray-200;
             }
             .subArticle {
                 @include breakpoint(768px) {
-                    padding: 0 10px 10px;
+                    padding: 0 15px 20px;
                     margin: 0;
                 }
                 @include breakpoint(max-width 767px) {
@@ -70,5 +71,6 @@
     }
     footer .container {
         max-width: $index;
+        margin: auto;
     }
 }
