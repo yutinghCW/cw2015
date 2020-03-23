@@ -4,15 +4,19 @@ $(function() {
         $(this).toggleClass('opened');
         $(this).children('.thirdNav').slideToggle();
     })
-    $('.sideMenu .moreItem > a').click(function() {
-        $(this).toggleClass('open');
-        $(this).siblings('ul').slideToggle();
-    })
     $('body').append('<div class="bodyTouchBlock"></div>');
-    $('.toggleSideMenu, .bodyTouchBlock').click(function() {
-        $('.sideMenu').toggleClass('show');
+    $('.hamburger, .bodyTouchBlock').click(function() {
+        $('.menubar--left').toggleClass('opened');
         $('.bodyTouchBlock').toggleClass('show');
     });
+    // sidemenu-left
+    $(".menubar--left > ul > li > .li__group > i.more, .menubar__user--member > ul > li > .li__group > i.more").click(function(event) {
+        $(this).toggleClass("active");
+        $(this).parent().parent().siblings().children().children("i.more").removeClass("active");
+        $(this).parent().parent().siblings().children("ul").slideUp();
+        $(this).parent().siblings("ul").slideToggle();
+        event.stopPropagation();
+    })
     $('.tabPanel .tabGroup li').click(function() {
         var tabIndex = $(this).index();
         $('.tabContent .active').removeClass('active');
@@ -119,20 +123,11 @@ $(function() {
     $('form.search .closeTouch').click(function() {
         $('form.search').removeClass('fadein');
     });
-    $(window).load(function() {
-        // etu height
-        $('.etu-item-list').each(function() {
-            if ($(this).outerHeight() < 20) {
-                $(this).hide()
-            };
-        });
-    });
     $(window).scroll(function() {
         scroTop = $(window).scrollTop();
         // 分享社群
         if ((location.href.match(/article/)) && (width >= 1025)) {
             var $informationArea = $('.informationArea').first();
-            // console.log(scroTop, $informationArea.offset().top);
             if (scroTop >= ($informationArea.offset().top + 30)) {
                 $informationArea.children('.sns-list').addClass('fixed');
                 $informationArea.children('.sns-list').removeClass('origin');
@@ -141,5 +136,23 @@ $(function() {
                 $informationArea.children('.sns-list').addClass('origin');
             }
         }
+    });
+    $(window).load(function() {
+        // etu height
+        $('.etu-item-list').each(function() {
+            if ($(this).outerHeight() < 20) {
+                $(this).hide()
+            };
+        });
+        $(window).scroll(function() {
+            var scroTop = $(window).scrollTop(),
+                headerTop = $('body>.banner').outerHeight();
+            if (scroTop >= headerTop) {
+                $('header, .banner, .main-nav').addClass('fixed');
+            } else {
+                $('header, .banner, .main-nav').removeClass('fixed');
+            }
+
+        });
     });
 })

@@ -1,5 +1,14 @@
 .banner {
     background-color: $white;
+    img {
+        margin: auto;
+    }
+    &.fixed {
+        margin-bottom: 60px;
+        @include breakpoint(1024px) {
+            margin-bottom: 65px;
+        }
+    }
 }
 
 .couplet-wide+.banner {

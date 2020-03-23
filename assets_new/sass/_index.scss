@@ -41,6 +41,11 @@
             }
         }
     }
+    .container {
+        @include breakpoint(768px) {
+            width: $index;
+        }
+    }
     .main {
         margin-top: 20px;
         @include breakpoint(768px) {
@@ -48,7 +53,7 @@
         }
         article {
             @include breakpoint(768px) {
-                width: ($index - 640 - 30);
+                width: ($index - 640);
             }
         }
         .articleGroup {
