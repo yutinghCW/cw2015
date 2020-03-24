@@ -2,6 +2,8 @@
     background-color: $white;
     img {
         margin: auto;
+        max-width: 100%;
+        height: auto;
     }
     &.fixed {
         margin-bottom: 60px;

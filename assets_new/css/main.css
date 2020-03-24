@@ -4374,6 +4374,8 @@ section.list-link > ul.etu-item-list li:hover .interest-list-link-title a {
 }
 .banner img {
   margin: auto;
+  max-width: 100%;
+  height: auto;
 }
 .banner.fixed {
   margin-bottom: 60px;
