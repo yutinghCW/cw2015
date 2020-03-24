@@ -1,5 +1,8 @@
 .banner {
-    background-color: $white;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #f7f7f7;
+    border: 1px solid $gray-100;
     img {
         margin: auto;
         max-width: 100%;
@@ -11,10 +14,6 @@
             margin-bottom: 65px;
         }
     }
-}
-
-.couplet-wide+.banner {
-    background-color: transparent;
 }
 
 .couplet-wide,

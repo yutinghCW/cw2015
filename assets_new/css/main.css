@@ -1739,7 +1739,7 @@ header .item > * {
   vertical-align: middle;
 }
 header i {
-  font-size: 1.3125em;
+  font-size: 1.3125rem;
 }
 header .hamburger,
 header .search,
@@ -3332,10 +3332,16 @@ section.list-link > ul.etu-item-list li:hover .interest-list-link-title a {
 .breadCrumbs {
   max-width: 1000px;
   padding-top: 20px;
-  padding-left: 15px;
-  padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+@media (min-width: 1024px) {
+  .breadCrumbs {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 .breadCrumbs ul {
   margin: 0;
@@ -4370,7 +4376,10 @@ section.list-link > ul.etu-item-list li:hover .interest-list-link-title a {
 }
 
 .banner {
-  background-color: #fff;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #f7f7f7;
+  border: 1px solid #EEEEEE;
 }
 .banner img {
   margin: auto;
@@ -4384,10 +4393,6 @@ section.list-link > ul.etu-item-list li:hover .interest-list-link-title a {
   .banner.fixed {
     margin-bottom: 65px;
   }
-}
-
-.couplet-wide + .banner {
-  background-color: transparent;
 }
 
 .couplet-wide,
